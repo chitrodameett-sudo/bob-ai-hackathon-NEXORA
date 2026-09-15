@@ -1,4 +1,4 @@
-# 🚀 [Your Project Title Here]
+# 🚀 Nexora Defence 
 
 > ⚠️ **Replace everything in `[ ]` brackets with your actual content before submission.**
 
@@ -8,87 +8,88 @@
 
 | Field | Value |
 |---|---|
-| **Team Name** | [Your Team Name] |
-| **Track** | [AI / DevOps / Sustainability / Open] |
-| **Team Lead** | [Name] — [email@ibm.com] |
-| **Members** | [Name 1], [Name 2], [Name 3] |
+| **Team Name** | **Nexora** |
+| **Track** | **AI**  |
+| **Team Lead** | **Meet Chitroda — chitrodameett@gmail.com** |
+| **Members** | **Jay Chavda, Jay Borad, Kalpesh Bhadja** +|
 
 ---
 
-## 🎯 Problem Statement
-
-> In 2–3 sentences: What problem does your project solve? Who experiences this problem?
-
-[Describe the real-world problem your project addresses. Be specific about who the user is and what pain point they face.]
-
+## 🎯 Problem Statement:Military organizations cannot accurately determine whether aircraft, vehicles, and equipment are mission-ready. Fixed maintenance schedules and unused sensor data can lead to unexpected failures, reducing operational readiness and increasing maintenance costs.
 ---
 
 ## 💡 Solution
-
-> In 2–3 sentences: What did you build? How does it solve the problem above?
-
-[Describe your solution clearly. Explain the core mechanism — what makes it work.]
-
+**NEXORA solves this by using AI-driven predictive maintenance to analyze equipment health, maintenance status, critical parts, and supplier risks to calculate real-time mission readiness.
+It also uses a 3D Digital Twin to identify the affected component and helps teams prioritize equipment that needs maintenance before unexpected failure.
+**
 ---
 
 ## ✨ Key Features
 
-- **Feature 1:** [Brief description — e.g., "Real-time anomaly detection using watsonx.ai"]
-- **Feature 2:** [Brief description]
-- **Feature 3:** [Brief description]
-- **Feature 4:** [Optional]
-- **Feature 5:** [Optional]
-
+AI-Powered Predictive Maintenance        :Predicts potential equipment failures using health and maintenance data.
+Real-Time Mission Readiness              :Calculates and monitors the readiness of every asset in real time.
+3D Digital Twin                          : Visually identifies the affected equipment/component and highlights the problem location.
+Smart Maintenance Prioritization         : Ranks equipment based on urgency so teams can focus on critical assets first.
+NEXORA AI Assistant                      : Provides instant explanations such as “Why is this equipment not ready?” and recommends maintenance priorities.
 ---
 
 ## 🛠️ Tech Stack
 
 | Category | Technologies |
 |---|---|
-| **Languages** | [e.g., Python, TypeScript] |
-| **Frameworks** | [e.g., FastAPI, React] |
-| **IBM Technologies** | [e.g., watsonx.ai, IBM Bob, IBM Cloud] |
-| **Databases** | [e.g., PostgreSQL, Redis] |
-| **Other** | [e.g., Docker, GitHub Actions] |
-
+Languages                  :JavaScript, HTML, CSS
+Frameworks	               :React 18, Vite, Node.js, Express.js
+IBM Technologies           :IBM watsonx.ai (planned integration)
+Databases                  :In-Memory Synthetic Data
+Other	                     :Three.js, React Three Fiber, Tailwind CSS, Recharts, React Router, Lucide Icons, GitHub
 ---
 
 ## 📁 Repository Structure
 
-```
-├── src/                  # All source code
-├── docs/                 # Written documentation
-│   ├── problem-statement.md
-│   ├── solution-overview.md
-│   ├── architecture.md
-│   └── setup-guide.md
-├── demo/                 # Demo artifacts
-│   ├── screenshots/      # App screenshots
-│   └── demo-video-link.txt  # Link to demo video
-├── presentation/         # Slide deck
-└── submission.yaml       # Structured submission metadata
-```
-
----
+├── client/                       # React frontend
+│   └── src/
+│       ├── components/           # UI components
+│       ├── pages/                # Application pages
+│       ├── services/             # API services
+│       └── ...
+│
+├── server/                       # Node.js + Express backend
+│   ├── routes/                   # API routes
+│   ├── services/                 # AI & readiness logic
+│   └── ...
+│
+├── README.md                     # Project documentation
+├── package.json                  # Project dependencies
+└── ...
 
 ## ⚡ How to Run
-
-> **Copy these exact steps from your [`docs/setup-guide.md`](docs/setup-guide.md)**
-
-```bash
-# 1. Clone the repo
+# 1. Clone the repository
 git clone https://github.com/[your-repo].git
 cd [your-repo]
 
-# 2. Install dependencies
-[your install command here]
+# 2. Install frontend dependencies
+cd client
+npm install
 
-# 3. Configure environment
-cp .env.example .env
-# Edit .env with your values
+# 3. Start the frontend
+npm run dev
 
-# 4. Run the project
-[your run command here]
+Backend
+
+Open a new terminal:
+
+# 4. Go to the server
+cd server
+
+# 5. Install backend dependencies
+npm install
+
+# 6. Start the backend
+npm run dev
+
+Access the Application
+Frontend: http://localhost:5173
+Backend:  http://localhost:5000
 ```
 
 ---
