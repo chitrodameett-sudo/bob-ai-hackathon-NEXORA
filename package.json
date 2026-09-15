@@ -1,0 +1,22 @@
+{
+  "name": "nexora-defense-platform",
+  "version": "2.0.0",
+  "description": "NEXORA - AI-Powered Defense & Aerospace Equipment Readiness Monitoring Platform",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "cd server && npm start",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build"
+  },
+  "keywords": [
+    "defense",
+    "aerospace",
+    "readiness-twin",
+    "3d-problem-location",
+    "equipment-monitoring",
+    "ai-predictive-maintenance"
+  ],
+  "author": "NEXORA Team (IBM Hackathon)",
+  "license": "MIT"
+}

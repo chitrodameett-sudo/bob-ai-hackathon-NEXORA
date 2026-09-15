@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ────────────────────────────────────────────────────────────
+   GOOGLE FONTS
+───────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-100 tracking-normal;
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+  * {
+    box-sizing: border-box;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────
+   ANIMATION CLASSES (simplified for enterprise)
+───────────────────────────────────────────────────────────── */
+.animate-float        { animation: float-y 3s ease-in-out infinite; }
+.animate-fade-up      { animation: fade-up 0.6s ease-out both; }
+.animate-slide-left   { animation: slide-in-left 0.4s ease-out both; }
+.animate-slide-right  { animation: slide-in-right 0.4s ease-out both; }
+/* Stub out removed animations to prevent breaking components that use them */
+.animate-rgb-border,
+.animate-rgb-text,
+.animate-glitch,
+.animate-scanline-pass,
+.animate-neon-pulse,
+.animate-flicker,
+.animate-radar {
+  /* Removed for professional look */
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-in-left {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+/* ────────────────────────────────────────────────────────────
+   PROFESSIONAL PANELS
+───────────────────────────────────────────────────────────── */
+.glass-panel {
+  background: #1e293b;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  border-radius: 0.5rem;
+}
+
+.glass-panel-rgb {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0.5rem;
+}
+
+.glass-dark {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 0.5rem;
+}
+
+/* ────────────────────────────────────────────────────────────
+   HUD GRID BACKGROUNDS (Muted for enterprise)
+───────────────────────────────────────────────────────────── */
+.hud-grid, .hud-grid-rgb {
+  background-color: #0f172a;
+}
+.hud-dots {
+  background-color: #0f172a;
+}
+.matrix-bg {
+  background-color: #0f172a;
+}
+.scanline-overlay::after {
+  display: none;
+}
+
+/* ────────────────────────────────────────────────────────────
+   GLOW UTILITIES (Muted)
+───────────────────────────────────────────────────────────── */
+.shadow-glow-cyan   { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.shadow-glow-purple { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.shadow-glow-rose   { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.shadow-glow-emerald { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.shadow-glow-amber  { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.shadow-glow-rgb    { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+
+.text-glow-cyan, .text-glow-emerald, .text-glow-rose, .text-glow-purple, .text-glow-amber, .text-glow-rgb {
+  text-shadow: none;
+}
+
+/* ────────────────────────────────────────────────────────────
+   FONT UTILITIES
+───────────────────────────────────────────────────────────── */
+.font-orbitron { font-family: 'Inter', system-ui, sans-serif; font-weight: 700; }
+.font-jb       { font-family: 'Inter', system-ui, sans-serif; }
+.font-tech     { font-family: 'JetBrains Mono', monospace; }
+
+/* ────────────────────────────────────────────────────────────
+   PROFESSIONAL BUTTONS
+───────────────────────────────────────────────────────────── */
+.btn-cyber {
+  transition: all 0.2s ease-in-out;
+}
+.btn-cyber:hover {
+  transform: translateY(-1px);
+}
+.btn-cyber::before {
+  display: none;
+}
+
+/* ────────────────────────────────────────────────────────────
+   CARD HOVER
+───────────────────────────────────────────────────────────── */
+.card-rgb-hover {
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #334155;
+  border-radius: 0.5rem;
+}
+.card-rgb-hover:hover {
+  border-color: #475569;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  transform: translateY(-2px);
+}
+
+/* ────────────────────────────────────────────────────────────
+   SCROLLBAR
+───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar         { width: 6px; height: 6px; }
+::-webkit-scrollbar-track   { background: #0f172a; }
+::-webkit-scrollbar-thumb   { background: #475569; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+/* ────────────────────────────────────────────────────────────
+   STATUS INDICATOR DOTS
+───────────────────────────────────────────────────────────── */
+.status-online {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+/* ────────────────────────────────────────────────────────────
+   GLITCH TITLE HELPER (Muted)
+───────────────────────────────────────────────────────────── */
+.glitch-title {
+  position: relative;
+}
+.glitch-title::before,
+.glitch-title::after {
+  display: none;
+}
+
+/* ────────────────────────────────────────────────────────────
+   PROGRESS BAR
+───────────────────────────────────────────────────────────── */
+.progress-rgb {
+  background: #3b82f6;
+}
